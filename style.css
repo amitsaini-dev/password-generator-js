@@ -2,49 +2,75 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .container {
   background-color: #ffffff;
-  padding: 30px 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  width: 300px;
+  padding: 30px 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 320px;
   text-align: center;
 }
 
 h2 {
+  color: #333;
   margin-bottom: 20px;
+  font-weight: 600;
 }
 
 #password {
   width: 100%;
-  padding: 10px;
-  margin: 15px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 12px;
+  margin: 20px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
   font-size: 18px;
   text-align: center;
+  letter-spacing: 1px;
+  transition: border 0.3s;
+}
+
+#password:focus {
+  border-color: #4facfe;
+  outline: none;
 }
 
 button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  padding: 12px 25px;
+  background-color: #4facfe;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #00c6fb;
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  #password {
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+  }
 }
